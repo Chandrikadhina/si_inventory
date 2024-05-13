@@ -150,6 +150,10 @@ class KategoriController extends Controller
         }
 
     }
-
+    function kategoriAPI(){
+        $kategori = Kategori::all();
+        $data = array("data"=>$kategori);
+        return response()->json($data);
+    }
 
 }
